@@ -6,11 +6,13 @@ import androidx.lifecycle.ViewModel
 
 class PlatsViewModel: ViewModel() {
 
-    private val _plats = MutableLiveData<Menus>()
-    val plats: LiveData<Menus> = _plats
+    private val _plats = MutableLiveData<Menu>()
+    val plats: LiveData<Menu> = _plats
 
 
-
+    fun updateMenu(plat: Int, quant: Int, preu: Int) {
+        _plats.value = Menu(plat, quant, preu)
+    }
 
 
 }
