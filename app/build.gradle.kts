@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.platsvmi_livedata_i_sharedvm"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.platsvmi_livedata_i_sharedvm"
