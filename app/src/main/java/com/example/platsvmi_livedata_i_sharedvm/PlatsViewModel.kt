@@ -14,5 +14,9 @@ class PlatsViewModel: ViewModel() {
         _plats.value = Menu(plat, quant, preu)
     }
 
+    fun pintarPreuPrincipalFinal (){
+
+    }
+
 
 }
