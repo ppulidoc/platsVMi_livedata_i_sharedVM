@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.example.platsvmi_livedata_i_sharedvm.databinding.FragmentPrimerPlatBinding
 
 
@@ -19,9 +20,14 @@ import com.example.platsvmi_livedata_i_sharedvm.databinding.FragmentPrimerPlatBi
         savedInstanceState: Bundle?
 
 
+
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentPrimerPlatBinding.inflate(inflater)
+
+        binding.button.setOnClickListener(){
+            findNavController().navigate(R.id.action_primerPlatFragment_to_segonPlatFragment, null)
+        }
 
 
         return binding.root

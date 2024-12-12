@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.platsvmi_livedata_i_sharedvm.databinding.FragmentSegonPlatBinding
 
 
@@ -18,6 +19,10 @@ class SegonPlatFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentSegonPlatBinding.inflate(inflater)
+
+        binding.button.setOnClickListener(){
+            findNavController().navigate(R.id.action_segonPlatFragment_to_totalFragment, null)
+        }
 
 
         return binding.root
