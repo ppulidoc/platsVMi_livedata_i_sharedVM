@@ -9,12 +9,27 @@
         android:layout_height="match_parent"
         tools:context=".TotalFragment">
 
+        <!-- Imagen de fondo -->
+
+        <!-- Elementos superpuestos -->
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="373dp"
+            android:layout_height="590dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="56dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/factura_png_fondo"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="298dp"
             android:layout_height="41dp"
-            android:layout_marginTop="116dp"
+            android:layout_marginTop="80dp"
             android:text="TOTAL :)"
             android:textAlignment="center"
             android:textSize="28dp"
@@ -25,43 +40,54 @@
 
         <TextView
             android:id="@+id/PrimerPlatFinal"
-            android:layout_width="368dp"
-            android:layout_height="41dp"
-            android:layout_marginTop="48dp"
+            android:layout_width="264dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="24dp"
             android:text=""
             android:textAlignment="center"
             android:textSize="18dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.627"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <TextView
             android:id="@+id/SegonPlat"
-            android:layout_width="180dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="128dp"
+            android:layout_width="213dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="124dp"
             android:text=""
             android:textAlignment="center"
             android:textSize="18dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.242"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <TextView
             android:id="@+id/textTotal"
-            android:layout_width="180dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="192dp"
+            android:layout_width="178dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="216dp"
             android:text=" "
             android:textAlignment="center"
             android:textSize="18dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.242"
+            app:layout_constraintHorizontal_bias="0.459"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+        <TextView
+            android:id="@+id/textTotalDesconte"
+            android:layout_width="230dp"
+            android:layout_height="77dp"
+            android:layout_marginTop="60dp"
+            android:text=" "
+            android:textAlignment="center"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.453"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTotal" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

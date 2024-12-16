@@ -41,6 +41,11 @@ class TotalFragment : Fragment() {
             binding.textTotal.text = "Preu Total: $preuFinal"
         }
 
+        viewModel.resultFinalDesconte.observe(viewLifecycleOwner) { preuFinalDesc ->
+            binding.textTotalDesconte.text = "Preu Total amb 10 %: $preuFinalDesc"
+        }
+
+
 
 
 

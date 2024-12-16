@@ -41,6 +41,9 @@ class PlatsViewModel: ViewModel() {
     private val _resultFinal = MutableLiveData<Int>()
     val resultFinal: LiveData<Int> get() = _resultFinal
 
+    private val _resultFinalDesconte = MutableLiveData<Int>()
+    val resultFinalDesconte: LiveData<Int> get() = _resultFinalDesconte
+
 
     fun updateMenu1(plat: Int, quant: Int, preu: Int) {
         _quantPlat1.value = quant
@@ -67,6 +70,13 @@ class PlatsViewModel: ViewModel() {
     fun totalPreuFinal() {
         val returnFinal = (_platoResult1.value ?: 0) + (_platoResult2.value ?: 0)
         _resultFinal.value = returnFinal
+
+    }
+
+    fun totalPreuFinalDesconte() {
+
+        val desconte = ((_resultFinal.value ?: 0) * 10 )/100
+        _resultFinalDesconte.value = (_resultFinal.value ?: 0) - desconte
 
     }
 
