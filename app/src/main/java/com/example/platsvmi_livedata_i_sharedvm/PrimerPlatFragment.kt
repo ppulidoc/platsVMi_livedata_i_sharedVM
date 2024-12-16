@@ -41,6 +41,8 @@ import com.example.platsvmi_livedata_i_sharedvm.databinding.FragmentPrimerPlatBi
                 viewModel.updateMenu(1,quantInt,preuInt)
             }
 
+            viewModel.pintarPreuPrincipalFinal()
+
             findNavController().navigate(R.id.action_primerPlatFragment_to_segonPlatFragment, null)
         }
 

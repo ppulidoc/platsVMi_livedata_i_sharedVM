@@ -1,5 +1,6 @@
 package com.example.platsvmi_livedata_i_sharedvm
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,14 +9,18 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.example.platsvmi_livedata_i_sharedvm.databinding.FragmentTotalBinding
 
 
 class TotalFragment : Fragment() {
 
     private lateinit var binding: FragmentTotalBinding
-    private val viewModel: PlatsViewModel by activityViewModels()
 
+    private val viewModel: PlatsViewModel by activityViewModels()
+    //private val viewModel = ViewModelProvider(requireActivity())[PlatsViewModel::class.java]
+
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -24,9 +29,9 @@ class TotalFragment : Fragment() {
         binding = FragmentTotalBinding.inflate(inflater)
 
 
-        viewModel.plats.observe(viewLifecycleOwner, Observer { menu ->
-            binding.PrimerPlatFinal.text = "Preu Primer plat: ${menu.preu}"
-        })
+        viewModel.platoResult1.observe(viewLifecycleOwner) { preu ->
+            binding.PrimerPlatFinal.text = "Preu Primer plat: $preu"
+        }
 
 
 

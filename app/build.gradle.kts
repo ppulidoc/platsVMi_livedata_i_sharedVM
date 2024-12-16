@@ -41,6 +41,7 @@ android {
 
 dependencies {
 
+    implementation(libs.androidx.lifecycle.viewmodel.android)
     val nav_version = "2.7.5"
     val lifecycle_version = "2.6.2"
 
