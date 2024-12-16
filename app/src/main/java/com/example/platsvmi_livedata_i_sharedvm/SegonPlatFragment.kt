@@ -35,6 +35,7 @@ class SegonPlatFragment : Fragment() {
             }
 
             viewModel.pintarPreuSegonFinal()
+            viewModel.totalPreuFinal()
 
             findNavController().navigate(R.id.action_segonPlatFragment_to_totalFragment, null)
         }

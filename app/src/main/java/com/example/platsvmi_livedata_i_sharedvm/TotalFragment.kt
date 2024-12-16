@@ -37,6 +37,10 @@ class TotalFragment : Fragment() {
             binding.SegonPlat.text = "Preu Beguda: $preuBeguda"
         }
 
+        viewModel.resultFinal.observe(viewLifecycleOwner) { preuFinal ->
+            binding.textTotal.text = "Preu Total: $preuFinal"
+        }
+
 
 
 
