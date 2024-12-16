@@ -38,7 +38,7 @@ import com.example.platsvmi_livedata_i_sharedvm.databinding.FragmentPrimerPlatBi
             val preuInt = preu.toIntOrNull()
 
             if (quantInt != null && preuInt != null ) {
-                viewModel.updateMenu(1,quantInt,preuInt)
+                viewModel.updateMenu1(1,quantInt,preuInt)
             }
 
             viewModel.pintarPreuPrincipalFinal()

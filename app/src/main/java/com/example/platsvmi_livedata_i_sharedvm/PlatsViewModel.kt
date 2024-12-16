@@ -9,6 +9,7 @@ class PlatsViewModel: ViewModel() {
     private val _plats = MutableLiveData<Menu>()
     val plats: LiveData<Menu> = _plats
 
+    // Primer plato
     private val _quantPlat1 = MutableLiveData<Int>()
     val quantPlat: LiveData<Int> get() = _quantPlat1
 
@@ -21,17 +22,40 @@ class PlatsViewModel: ViewModel() {
     private val _platoResult1 = MutableLiveData<Int>()
     val platoResult1: LiveData<Int> get() = _platoResult1
 
+    // Segon plat
 
-    fun updateMenu(plat: Int, quant: Int, preu: Int) {
+    private val _quantPlat2 = MutableLiveData<Int>()
+    val quantPlat2: LiveData<Int> get() = _quantPlat2
+
+    private val _preu2 = MutableLiveData<Int>()
+    val preu2: LiveData<Int> get() = _preu2
+
+    private val _plato2= MutableLiveData<Int>()
+    val plato2: LiveData<Int> get() = _plato2
+
+    private val _platoResult2 = MutableLiveData<Int>()
+    val platoResult2: LiveData<Int> get() = _platoResult2
+
+    fun updateMenu1(plat: Int, quant: Int, preu: Int) {
         _quantPlat1.value = quant
         _preu1.value = preu
         _plato1.value = plat
+    }
 
+    fun updateMenu2(plat: Int, quant: Int, preu: Int) {
+        _quantPlat2.value = quant
+        _preu2.value = preu
+        _plato2.value = plat
     }
 
     fun pintarPreuPrincipalFinal () {
         val returnPreu = (_quantPlat1.value ?: 0) * (_preu1.value ?: 0)
         _platoResult1.value = returnPreu
+    }
+
+    fun pintarPreuSegonFinal () {
+        val returnPreu2 = (_quantPlat2.value ?: 0) * (_preu2.value ?: 0)
+        _platoResult2.value = returnPreu2
     }
 
 

@@ -33,6 +33,11 @@ class TotalFragment : Fragment() {
             binding.PrimerPlatFinal.text = "Preu Primer plat: $preu"
         }
 
+        viewModel.platoResult2.observe(viewLifecycleOwner) { preuBeguda ->
+            binding.SegonPlat.text = "Preu Beguda: $preuBeguda"
+        }
+
+
 
 
         return binding.root
